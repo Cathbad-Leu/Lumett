@@ -1,0 +1,10 @@
+Columns=140
+Rows=6
+RewrapOnResize=no
+Language=@
+Locale=it_IT
+Charset=UTF-8
+ScrollbackLines=20
+Scrollbar=left
+ScrollMod=off
+PgUpDnScroll=yes

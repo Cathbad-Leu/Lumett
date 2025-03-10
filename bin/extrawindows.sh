@@ -7,6 +7,6 @@ mintty -p left --o Hold=error --Report o --configdir './usr/share/mintty' --clas
 mintty -p left --o Hold=error --Report o --configdir './usr/share/mintty' --class 'two' --tabbar -c './.mintty/mintty_wside_rc' -i './lumett.ico' -e tt++ -G -t 'Kills' -r './lib/gui/win_side_kills.tin' &
 mintty -p left --o Hold=error --Report o --configdir './usr/share/mintty' --class 'two' --tabbar -c './.mintty/mintty_wside_rc' -i './lumett.ico' -e tt++ -G -t 'Group' -r './lib/gui/win_side_grp.tin' &
 
-mintty -p right --o Hold=error --Report o --configdir '.\usr\share\mintty' -c './.mintty/mintty_wimg_rc' -i './lumett.ico' -e '.\bin\bash' -c -r 'sh ./bin/showimage.sh'  &
+# mintty -p right --o Hold=error --Report o --configdir '.\usr\share\mintty' -c './.mintty/mintty_wimg_rc' -i './lumett.ico' -e '.\bin\bash' -c -r #'sh ./bin/showimage.sh' &
 
 mintty -p right -p bottom --o Hold=error --Report o --configdir '.\usr\share\mintty' -o 'Background=./leu_test/imgs/mapbkg.jpg' -c './.mintty/mintty_wmap_rc' -i './lumett.ico' -e 'tt++' -G -t 'Mappr' -r './lib/gui/win_mapper.tin' &
