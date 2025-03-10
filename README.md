@@ -1,4 +1,7 @@
-File di script per una client per il mud Lumen et Umbra.
+File di script per una client per mud.
+Principalmente pensato per il mud Lumen et Umbra.
+E' possibile utilizzarla per vari altri mud.
+La client e' scalcabile su sistemi diversi e dimensioni diverse.
 Premessa: avere installato sul sistema tintin o una delle varianti 
 (vedi wintin++) Linux o shell di comando linux esistono per tutti 
 i sistemi operativi, vedi: WLS per windows, Termux per Android, 
@@ -22,7 +25,6 @@ Su WINDOWS
   - Scaricare il zip e decomprimere dove desiderato.
   - lumett.bat      --> avviare per una versione classica  
   - lumettmulti.bat --> per una vers multifinestra
-
 
 ---------------Release vers 1.7--------------------------------
 Aggiunto un selettore di avvio.
@@ -139,6 +141,13 @@ Un ringraziamento per i suoi script ad:
 
 Alla comunity di tintin++ 
 
-Alla comunity di Lumen et Umbra, in particolare Nymiae,Xenon,Moylen,Oxon.
+Alla comunity di Lumen et Umbra, in particolare Nymiae,Xenon,Moylen,Oxon e Kyrus
 
 E alla ai vari autori di guide e manuali su Mudhalla.com
+
+![Immagine 2025-03-10 153700](https://github.com/user-attachments/assets/a3f21e21-50a9-495c-8fde-4ebd920ce148)
+![Immagine 2025-03-10 223404](https://github.com/user-attachments/assets/6bcbe4de-5b79-4eee-831f-d3a14bc06b84)
+![Immagine 2025-03-10 223536](https://github.com/user-attachments/assets/ee415325-baf8-4e82-a128-0fcbca321262)
+![Immagine 2025-03-10 223616](https://github.com/user-attachments/assets/c39f42e5-4fd0-4312-8e33-0db8e11e1c2b)
+
+
