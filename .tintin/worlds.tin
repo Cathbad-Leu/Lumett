@@ -5,24 +5,24 @@
     {leustable} 
     {
         {ALIAS} {leus}
-        {CHARACTER} {Cathbad}
+        {CHARACTER} {}
         {FILE} {./leu_stable/main.tin}
         {HOST} {new-leu.leu.it}
         {INPUT} {}
         {NAME} {leustable}
-        {PASSWORD} {4p9Ku0CStocStUGAAMRLDYH=}
+        {PASSWORD} {}
         {PORT} {6000}
         {SSL} {off}
     }
     {leutest} 
     {
         {ALIAS} {leut}
-        {CHARACTER} {Cathbad}
+        {CHARACTER} {}
         {FILE} {./leu_test/main.tin}
         {HOST} {new-leu.leu.it}
         {INPUT} {}
         {NAME} {leutest}
-        {PASSWORD} {4p9Ku0CStocStUGAAMRLDYH=}
+        {PASSWORD} {}
         {PORT} {7000}
         {SSL} {off}
     }
