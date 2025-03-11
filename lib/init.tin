@@ -1,5 +1,7 @@
 #NOP VSOF;
 
+#var cfgdir ./.tintin
+
 #EVENT {RECEIVED ERROR}
 {
     #echo <118>%h { TOKENIZER };
@@ -76,11 +78,6 @@
 {
      #NOP -- go to the wizard --;
      #delay 0 #gts gui_wizard
-}
-
-#EVENT {SESSION DESTROYED}
-{    
-    #gts #delay 0 #end
 }
 
 #class SAT_SCREEN close;

@@ -5,8 +5,7 @@
 
 #class LEU open;
 
-#NOP -- Importa le librerie         --;
-#var cfgdir ./.tintin
+#NOP -- Importa le librerie  --;
 #var library ./lib
 #var mod ./leu_test/modules
 #var saves ./leu_test/saves
@@ -92,14 +91,15 @@ gui_ingame_refresh
     #MAP write $saves/map.txt
 }
 
-#EVENT {SESSION DESTROYED}
-{    
-    #gts #delay 0 #end
-}
-
 #NOP -------------------------------------------------------------------------;
 #NOP Varyous events;
 #NOP -------------------------------------------------------------------------;
+#EVENT {RECEIVED ERROR}
+{
+    #echo <118>%h { TOKENIZER };
+    #info tokenizer -1;
+    #echo <118>%h
+}
 
 #EVENT {SCREEN RESIZE}
 {
@@ -118,11 +118,9 @@ gui_ingame_refresh
     gui_ingame_resize
 }
 
-#EVENT {RECEIVED ERROR}
-{
-    #echo <118>%h { TOKENIZER };
-    #info tokenizer -1;
-    #echo <118>%h
+#EVENT {SESSION DESTROYED}
+{    
+    #gts #delay 0 #end
 }
 
 #NOP -------------------------------------------------------------------------;

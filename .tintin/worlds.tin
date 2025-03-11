@@ -5,12 +5,12 @@
     {leustable} 
     {
         {ALIAS} {leus}
-        {CHARACTER} {}
+        {CHARACTER} {Cathabd}
         {FILE} {./leu_stable/main.tin}
         {HOST} {new-leu.leu.it}
         {INPUT} {}
         {NAME} {leustable}
-        {PASSWORD} {}
+        {PASSWORD} {4p9Ku0CStocStUGAAMRLDYH=}
         {PORT} {6000}
         {SSL} {off}
     }
