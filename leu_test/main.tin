@@ -6,13 +6,13 @@
 #class LEU open;
 
 #NOP -- Importa le librerie         --;
-#var libray ./lib
+#var library ./lib
 #var mod ./leu_test/modules
 #var saves ./leu_test/saves
 #var imgs ./leu_test/imgs
-#read $libray/colors.tin
-#read $libray/filesystem.tin
-#read $libray/modloader.tin
+#read $library/colors.tin
+#read $library/filesystem.tin
+#read $library/modloader.tin
 
 #NOP -- Load in the modules --;
 load_module functions
@@ -123,6 +123,7 @@ load_module triggers
 #SCREEN raise {SCREEN LOCATION}
 #SCREEN raise {DESKTOP DIMENSIONS}
 #SCREEN raise {SCREEN DIMENSIONS}
+
 gui_ingame_init
 gui_ingame_refresh
 
