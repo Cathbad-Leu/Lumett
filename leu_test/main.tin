@@ -10,6 +10,7 @@
 #var mod ./leu_test/modules
 #var saves ./leu_test/saves
 #var imgs ./leu_test/imgs
+#var bin ./leu_test/bin
 #read $library/colors.tin
 #read $library/filesystem.tin
 #read $library/modloader.tin
@@ -51,6 +52,17 @@ load_module triggers
 #macro {\eOx} {n; #echo n}
 
 #NOP -------------------------------------------------------------------------;
+#NOP Inizializza la nuova gui_ingame e dagli una rinfrescata;
+#NOP -------------------------------------------------------------------------;
+#SCREEN raise {SCREEN RESIZE}
+#SCREEN raise {SCREEN LOCATION}
+#SCREEN raise {DESKTOP DIMENSIONS}
+#SCREEN raise {SCREEN DIMENSIONS}
+
+gui_ingame_init
+gui_ingame_refresh
+
+#NOP -------------------------------------------------------------------------;
 #NOP Session's Events;
 #NOP -------------------------------------------------------------------------;
 
@@ -76,7 +88,12 @@ load_module triggers
     #class roomimagesclass assign #var cscrtx "scrtx=$scrTopX";
     #class roomimagesclass assign #var cscrty "scrty=$scrTopY";
     #class roomimagesclass write $imgs/currentroom.txt;
-    #MAP write $saves/map.dat
+    #MAP write $saves/map.txt
+}
+
+#EVENT {SESSION DESTROYED}
+{    
+    #gts #delay 0 #end
 }
 
 #NOP -------------------------------------------------------------------------;
@@ -115,17 +132,6 @@ load_module triggers
 {
 	#cursor position %1
 }
-
-#NOP -------------------------------------------------------------------------;
-#NOP Inizializza la nuova gui_ingame e dagli una rinfrescata;
-#NOP -------------------------------------------------------------------------;
-#SCREEN raise {SCREEN RESIZE}
-#SCREEN raise {SCREEN LOCATION}
-#SCREEN raise {DESKTOP DIMENSIONS}
-#SCREEN raise {SCREEN DIMENSIONS}
-
-gui_ingame_init
-gui_ingame_refresh
 
 #class LEU close
 

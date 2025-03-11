@@ -58,6 +58,16 @@ load_module triggers
 #NOP INFO {EVENT} {OFF};
 
 #NOP -------------------------------------------------------------------------;
+#NOP Inti the gui
+#NOP -------------------------------------------------------------------------;
+#SCREEN raise {SCREEN RESIZE};
+#SCREEN raise {SCREEN LOCATION};
+#SCREEN raise {DESKTOP DIMENSIONS};
+#SCREEN raise {SCREEN DIMENSIONS};
+gui_init;
+gui_refresh;
+
+#NOP -------------------------------------------------------------------------;
 #NOP Eventi di sessione;
 #NOP -------------------------------------------------------------------------;
 
@@ -179,12 +189,5 @@ load_module triggers
           #LINE ignore #SHOWME Turn logging on or off?;
      };
 }
-
-#SCREEN raise {SCREEN RESIZE};
-#SCREEN raise {SCREEN LOCATION};
-#SCREEN raise {DESKTOP DIMENSIONS};
-#SCREEN raise {SCREEN DIMENSIONS};
-gui_init;
-gui_refresh;
 
 #class LEU close;

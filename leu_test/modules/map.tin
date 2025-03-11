@@ -31,11 +31,11 @@ Vedi #help Map\n
 #ALIAS {map_start}
 {
     #MAP create;  
-    #MAP flag nofollow off;
-    #MAP flag static off;
+    #NOP MAP flag nofollow on;
+    #NOP MAP flag static on;
     #MAP flag vtmap on;
-    #MAP flag blockgraphics on;
-    #MAP read $saves/map.dat;
+    #NOP MAP flag blockgraphics on;
+    #MAP read $saves/map.txt;
     #MAP goto 1; 
 }
 

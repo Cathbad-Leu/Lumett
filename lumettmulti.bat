@@ -19,8 +19,9 @@ start /b .\bin\mintty.exe -p left --o Hold=error --Report o --configdir '.\usr\s
 start /b .\bin\mintty.exe -p left --o Hold=error --Report o --configdir '.\usr\share\mintty' --class 'two' --tabbar -c './.mintty/mintty_wside_rc' -i './lumett.ico' -e './bin/tt++.exe' -G -t 'Kills' -r './lib/gui/win_side_kills.tin' %*
 start /b .\bin\mintty.exe -p left --o Hold=error --Report o --configdir '.\usr\share\mintty' --class 'two' --tabbar -c './.mintty/mintty_wside_rc' -i './lumett.ico' -e './bin/tt++.exe' -G -t 'Group' -r './lib/gui/win_side_grp.tin' %*
 
-REM start the room image window
-start /b .\bin\mintty.exe -p right --o Hold=error --Report o --configdir '.\usr\share\mintty' -c './.mintty/mintty_wimg_rc' -i './lumett.ico' -e '.\bin\bash.exe' -c -r 'sh ./bin/showimage.sh' %*
+REM start the room image window (disabled, have to find a better way to handle this)
+REM start /b .\bin\mintty.exe -p right --o Hold=error --Report o --configdir '.\usr\share\mintty' -c './.mintty/mintty_wimg_rc' -i './lumett.ico' -e '.\bin
+REM \bash.exe' -c -r 'sh ./bin/showimage.sh' %*
 
 REM start the mapper window
 start /b .\bin\mintty.exe -p right --o Hold=error --Report o --configdir '.\usr\share\mintty' -o 'Background=./leu_test/imgs/mapbkg.jpg' -c './.mintty/mintty_wmap_rc' -i './lumett.ico' -e './bin/tt++.exe' -G -t 'Mappr' -r './lib/gui/win_mapper.tin' %*

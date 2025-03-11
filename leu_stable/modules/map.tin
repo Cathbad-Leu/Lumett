@@ -31,11 +31,10 @@ Vedi #help Map\n
 #ALIAS {map_start}
 {
     #map create;
-    #map flag nofollow;
+    #NOP flag nofollow;
     #map flag vtmap on;
-    #map flag static;
-    #map flag blockgraphics on;
-    #map read ./leu_stable/saves/map.dat;
+    #NOP lag blockgraphics on;
+    #map read $saves/map.dat;
     #map goto 1;
 
     #map terrain {Forest} {<228>⟑} DENSE WIDE;

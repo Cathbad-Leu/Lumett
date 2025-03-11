@@ -61,20 +61,20 @@ mappa.\n
     map_start;
     #if {$isDetached == 0}
     {
-      #nop triggers for one window;
+      #nop triggers for one window-client;
       load_module trigger_attached;
       load_alias_sidebar
     };
     #elseif {$isDetached == 1 }
     {
-      #nop triggers for multi windows;
+      #nop triggers for multi windows-win;
       load_module trigger_detached;
       alias_load_extsidebar
     };
     #elseif {$isDetached == 2}
     { 
-      #system {sh ./bin/extrawindows.sh};
-      #nop triggers for multi windows;
+      #nop triggers for multi windows-linux;    
+      #system {sh $bin/extrawindows.sh};
       load_module trigger_detached;
       alias_load_extsidebar
     };

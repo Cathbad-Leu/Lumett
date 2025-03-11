@@ -58,7 +58,6 @@ mappa.\n
 #NOP -------------------------------------------------------------------------;
 #ALIAS {gui_init}
 {
-    #MAP create;
     map_start;
     #VAR hasLogged 1
     gui_refresh;

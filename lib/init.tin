@@ -78,6 +78,11 @@
      #delay 0 #gts gui_wizard
 }
 
+#EVENT {SESSION DESTROYED}
+{    
+    #gts #delay 0 #end
+}
+
 #class SAT_SCREEN close;
 
 #NOP -------------------------------------------------------------------------;
