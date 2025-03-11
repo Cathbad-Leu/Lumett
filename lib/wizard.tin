@@ -497,7 +497,7 @@
 {
     #if {&gui_wizard[new] == 0}
     {
-        #class WORLDS WRITE $info[SYSTEM][TINTIN]/worlds.tin;
+        #class WORLDS WRITE $cfgdir/worlds.tin;
         #showme {<acf>Saving worlds.};
         #return
     };
@@ -514,7 +514,7 @@
     draw_worlds {&worldlist[$gui_wizard[new][NAME]]};
     reload_profile_tab;
     #line ignore #showme {<acf>World <ffa>$gui_wizard[new][NAME]<acf> saved.};
-    #class WORLDS WRITE $info[SYSTEM][TINTIN]/worlds.tin
+    #class WORLDS WRITE $cfgdir/worlds.tin
 }
 
 #ALIAS {gui_wizard_remove}
@@ -534,7 +534,7 @@
     profile_tab_cancel;
     draw_worlds 0;
     #line ignore #showme {<acf>World <ffa>$gui_wizard[new][NAME]<acf> removed.};
-    #class WORLDS WRITE $info[SYSTEM][TINTIN]/worlds.tin
+    #class WORLDS WRITE $cfgdir/worlds.tin
 }
 
 #ALIAS {reload_profile_tab}
@@ -604,7 +604,8 @@
     #class WORLDS assign #variable {worldlist} {};
     #info system save;
     #banner save;
-    #line quiet #read $info[SYSTEM][TINTIN]/worlds.tin;
+    #line quiet #read $cfgdir/worlds.tin;
+    #line quiet #read $cfgdir/worlds.tin;
     #variable gui_wizard[pause] 0;
     #variable gui_wizard[profile_tab] 0;
     #variable gui_wizard[world_tab] worlds;

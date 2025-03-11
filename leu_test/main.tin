@@ -6,6 +6,7 @@
 #class LEU open;
 
 #NOP -- Importa le librerie         --;
+#var cfgdir ./.tintin
 #var library ./lib
 #var mod ./leu_test/modules
 #var saves ./leu_test/saves
