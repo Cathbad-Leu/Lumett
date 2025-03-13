@@ -151,5 +151,4 @@
     put ritorno latt
 }
 
-
 #CLASS {alias_data} CLOSE

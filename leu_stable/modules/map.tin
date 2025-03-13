@@ -30,19 +30,25 @@ Vedi #help Map\n
 
 #ALIAS {map_start}
 {
-    #map create;
-    #NOP flag nofollow;
-    #map flag vtmap on;
-    #NOP lag blockgraphics on;
-    #map read $saves/map.dat;
-    #map goto 1;
-
-    #map terrain {Forest} {<228>⟑} DENSE WIDE;
-    #map terrain {Field} {<128>·} DENSE WIDE;
-    #map terrain {Desert} {<cca>·} DENSE NARROW;
-    #map terrain {Inside} {<f707880>▒} DENSE WIDE;
-    #map terrain {Deep Water} {<f2232ff>▒} DENSE WIDE;
-    #map terrain {Water} {<f2284ff>▒} DENSE WIDE;
+     #MAP create;  
+     #MAP flag nofollow off;
+     #MAP flag static off;
+     #MAP flag vtmap on;
+     #MAP flag blockgraphics off;
+     #map flag asciigraphic on;
+     #map flag terrain on;
+     #map flag direction on;
+     #map flag asciivnums off;
+     #MAP read $saves/map.txt;
+ 
+     #map terrain {Forest} {<228>⟑} DENSE WIDE;
+     #map terrain {Field} {<128>·} DENSE WIDE;
+     #map terrain {Desert} {<cca>·} DENSE NARROW;
+     #map terrain {Inside} {<f707880>▒} DENSE WIDE;
+     #map terrain {Deep Water} {<f2232ff>▒} DENSE WIDE;
+     #map terrain {Water} {<f2284ff>▒} DENSE WIDE;
+     
+     #MAP goto 1
 }
 
 #EVENT {MAP SHORT-CLICKED MOUSE BUTTON ONE}
