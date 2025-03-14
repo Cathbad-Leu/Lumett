@@ -1,15 +1,15 @@
-#nop --
-#nop Class Definitions
-#nop --
+#nop --;
+#nop Class Definitions;
+#nop --;
 
 #var comm_bar-description {Funzioni della barra delle Comunicazioni}
 #var comm_bar-help {
 Funzioni della finestra di comunicazione.\n
 }
 
-#nop --
-#nop Modloader Stuff
-#nop --
+#nop --;
+#nop Modloader Stuff;
+#nop --;
 
 #alias comm_bar-register {
 	#nop need to check: events;

@@ -1,6 +1,6 @@
-#nop --
-#nop Class Definitions
-#nop --
+#nop --;
+#nop Class Definitions;
+#nop --;
 
 #var counter-description {Utilità per i Contatori}
 #var counter-help {
@@ -12,9 +12,9 @@ Functions:\n
 \tcounter_value{<counter name} - ritorna 0 se il contatore non esiste\n
 }
 
-#nop --
-#nop Modloader Stuff
-#nop --
+#nop --;
+#nop Modloader Stuff;
+#nop --;
 
 #alias counter-register {
 	#if {@isloaded{modloader}} {

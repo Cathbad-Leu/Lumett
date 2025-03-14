@@ -1,15 +1,15 @@
-#nop --
-#nop Class Definitions
-#nop --
+#nop --;
+#nop Class Definitions;
+#nop --;
 
 #var telnet-description {Funzioni del protocollo Telnet}
 #var telnet-help {
 Gestione del protocollo telnet.\n
 }
 
-#nop --
-#nop Modloader Stuff
-#nop --
+#nop --;
+#nop Modloader Stuff;
+#nop --;
 
 #alias telnet-register {
 	#nop need to check: events;

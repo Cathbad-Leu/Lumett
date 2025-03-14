@@ -1,6 +1,6 @@
-#nop --
-#nop Class Definitions
-#nop --
+#nop --;
+#nop Class Definitions;
+#nop --;
 
 #var trigger_detached-description {Funzioni dei Trigger}
 #var trigger_detached-help {
@@ -10,9 +10,9 @@ Vedi help action\n
 
 }
 
-#nop --
-#nop Modloader Stuff
-#nop --
+#nop --;
+#nop Modloader Stuff;
+#nop --;
 
 #alias trigger_detached-register {
 	#nop need to check: events;

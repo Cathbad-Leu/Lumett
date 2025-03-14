@@ -102,7 +102,7 @@
     };
     #else
     {
-        #variable gui_wizard[new] {$info[BANNERS][%1]} {{SSL}{off}} {{FILE}{}} {{CHARACTER}{}} {{PASSWORD}{}} {{INPUT}{}};
+        #variable gui_wizard[new] {$info[BANNERS][%1]} {{SSL}{off}} {{FILE}{}} {{CHARACTER}{}} {{PASSWORD}{}} {{INPUT}{}} {{DETACHED}{off}};
         draw_sponsors {%1}
     };
     reload_profile_tab;
@@ -407,14 +407,18 @@
         #case {{PASSWORD}}
         {
             profile_tab_draw 19 -26 21 -1 PASSWORD
-        }
+        };
+        #case {{DETACHED}}
+        {
+            profile_tab_draw 22 -26 24 -1 DETACHED toggle
+        };
     }
 }
 
 #ALIAS {profile_tab_cancel}
 {
     #screen get INPUT_NAME input_name;
-    #regexp {$input_name} {profile_tab_{NAME|ALIAS|HOST|PORT|SSL|FILE|CHARACTER|PASSWORD}}
+    #regexp {$input_name} {profile_tab_{NAME|ALIAS|HOST|PORT|SSL|FILE|CHARACTER|PASSWORD|DETACHED}}
     {
         profile_tab_cycle INPUT &1
     };
@@ -426,7 +430,7 @@
 #ALIAS {profile_tab_save}
 {
     #screen get INPUT_NAME input_name;
-    #regexp {$input_name} {profile_tab_{NAME|ALIAS|INPUT|HOST|PORT|SSL|FILE|CHARACTER|PASSWORD}}
+    #regexp {$input_name} {profile_tab_{NAME|ALIAS|INPUT|HOST|PORT|SSL|FILE|CHARACTER|PASSWORD|DETACHED}}
     {
         profile_tab_pull &1
     }
@@ -435,7 +439,7 @@
 #ALIAS {gui_wizard_new}
 {
     #class profile_tab kill;
-    #variable gui_wizard[new] {{NAME}{} {ALIAS}{} {HOST}{} {PORT}{} {SSL}{off} {FILE}{} {CHARACTER}{} {PASSWORD}{} {INPUT}{}};
+    #variable gui_wizard[new] {{NAME}{} {ALIAS}{} {HOST}{} {PORT}{} {SSL}{off} {FILE}{} {CHARACTER}{} {PASSWORD}{} {DETACHED}{off} {INPUT}{}};
     reload_profile_tab
 }
 
@@ -467,9 +471,14 @@
     #line ignore #showme {<acf>Connecting to <ffa>$gui_wizard[new][NAME]<acf>..};
     #config mouse off;
     #buffer refresh;
-    #if {{$gui_wizard[new][SSL]} == {off}}
+    #if {{$gui_wizard[new][SSL]} == {off} && {$gui_wizard[new][DETACHED]} == {off}}
     {
         #session $gui_wizard[new][ALIAS] $gui_wizard[new][HOST] $gui_wizard[new][PORT] $gui_wizard[new][FILE]
+    };
+    #elseif {{$gui_wizard[new][SSL]} == {off} && {$gui_wizard[new][DETACHED]} == {on}}
+    {
+        #format {detachedfile} {%s%s} {$gui_wizard[new][FILE]} {.detached};
+        #session $gui_wizard[new][ALIAS] $gui_wizard[new][HOST] $gui_wizard[new][PORT] $detachedfile
     };
     #else
     {
@@ -548,6 +557,7 @@
     profile_tab FILE;
     profile_tab CHARACTER;
     profile_tab PASSWORD;
+    profile_tab DETACHED;
     #if {&gui_wizard[new][DESC] && $gui_wizard[cols] > 26}
     {
         #draw jade bumped ualign rounded scaled calign scroll box 1 1 1 $gui_wizard[cols] {<ffa>$gui_wizard[new][NAME] <fff>- <ffa>$gui_wizard[new][WEBSITE]};

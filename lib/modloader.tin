@@ -52,7 +52,7 @@ it lives in lib/, as it is not actually a module.\n
 	#if {&{modules[%1]}} {
 		#unvar modules[%1];
 	} {
-		#nop
+		#nop;
 	}
 }
 
@@ -93,7 +93,7 @@ it lives in lib/, as it is not actually a module.\n
 		#class &1 kill;
 		fail_module {&1} {<fcc>%1}
 	} {
-		#nop
+		#nop;
 	}
 }
 
@@ -114,4 +114,4 @@ it lives in lib/, as it is not actually a module.\n
 register_module modloader
 #class modloader close
 
-#nop vim: syntax=tt
+#nop vim: syntax=tt;

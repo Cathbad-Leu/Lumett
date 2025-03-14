@@ -1,6 +1,6 @@
-#nop --
-#nop Class Definitions
-#nop --
+#nop --;
+#nop Class Definitions;
+#nop --;
 
 #var queues-description {Coda di Azioni}
 #var queues-help {
@@ -16,9 +16,9 @@ There is a shortcut command for NCO (nco <command>).\n
 Combat queues clear at the end of combat automatically.\n
 }
 
-#nop --
-#nop Modloader Stuff
-#nop --
+#nop --;
+#nop Modloader Stuff;
+#nop --;
 
 #alias queues-register {
 	#if {@isloaded{modloader}} {
@@ -145,9 +145,9 @@ Combat queues clear at the end of combat automatically.\n
 	#if {@is_alias{display_right_tiles}} {display_right_tiles};
 }
 
-#nop -- ---------------------------------------------------------------
-#nop -- Functions
-#nop -- ---------------------------------------------------------------
+#nop -- ---------------------------------------------------------------;
+#nop -- Functions;
+#nop -- ---------------------------------------------------------------;
 
 #function {spell_can_cast} {
     #var result 1;
@@ -182,9 +182,9 @@ Combat queues clear at the end of combat automatically.\n
 }
 
 
-#nop -- ---------------------------------------------------------------
-#nop -- Ticks
-#nop -- ---------------------------------------------------------------
+#nop -- ---------------------------------------------------------------;
+#nop -- Ticks;
+#nop -- ---------------------------------------------------------------;
 #tick {queue runner} {queueRunner} {0.2};
 event_register {VARIABLE UPDATED spellqueue} {queue_block}
 

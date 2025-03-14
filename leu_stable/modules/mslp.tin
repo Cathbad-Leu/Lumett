@@ -1,6 +1,6 @@
-#nop --
-#nop Class Definitions
-#nop --
+#nop --;
+#nop Class Definitions;
+#nop --;
 
 #var mslp-description {Funzioni di MSLP}
 #var mslp-help {
@@ -11,9 +11,9 @@ La gestione dei link con il mouse.\n
 Definizione di eventi dei diversi link.\n
 }
 
-#nop --
-#nop Modloader Stuff
-#nop --
+#nop --;
+#nop Modloader Stuff;
+#nop --;
 
 #alias mslp-register {
 	#nop need to check: events;

@@ -1,6 +1,6 @@
-#nop --
-#nop Class Definitions
-#nop --
+#nop --;
+#nop Class Definitions;
+#nop --;
 
 #var macro-description {Funzioni per le Macro}
 #var macro-help {
@@ -15,9 +15,9 @@ Si possono richiamare con:\n
 playmacro <nomemacro>\n
 }
 
-#nop --
-#nop Modloader Stuff
-#nop --
+#nop --;
+#nop Modloader Stuff;
+#nop --;
 
 #alias macro-register {
 	#nop need to check: events;
@@ -28,9 +28,9 @@ playmacro <nomemacro>\n
 	}
 }
 
-#nop -------------------------------------------------------------------------
-#nop File di gestione delle registrazioni
-#nop -------------------------------------------------------------------------
+#nop -------------------------------------------------------------------------;
+#nop File di gestione delle registrazioni;
+#nop -------------------------------------------------------------------------;
 
 #VARIABLE {record_time} {0}
 

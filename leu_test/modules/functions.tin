@@ -1,13 +1,13 @@
-#nop --
-#nop Class Definitions
-#nop --
+#nop --;
+#nop Class Definitions;
+#nop --;
 
 #var functions-description {Funzioni generali utili}
 #var functions-help {Many support <ccf>#function<fff>s you may find handy.}
 
-#nop --
-#nop Modloader Stuff
-#nop --
+#nop --;
+#nop Modloader Stuff;
+#nop --;
 
 #alias functions-register {
 	register_module functions
@@ -333,7 +333,7 @@
     #return 0;
 }
 
-#nop -- This uses the three letter combo thing
+#nop -- This uses the three letter combo thing;
 #function groupClassIsPresent {                                                                                 
     #loop {1} {&MSDP_GROUP[]} {index} {
         #if { ("$MSDP_GROUP[$index][class]" == "%1" ) &&
@@ -380,4 +380,4 @@
     }
 }
 
-#nop -- vim: syntax=tt
+#nop -- vim: syntax=tt;

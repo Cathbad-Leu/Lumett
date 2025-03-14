@@ -1,6 +1,6 @@
-#nop --
-#nop Class Definitions
-#nop --
+#nop --;
+#nop Class Definitions;
+#nop --;
 
 #var gui_ingame-description {Funzioni della gui_ingame}
 #var gui_ingame-help {
@@ -12,9 +12,9 @@ bar_side (barra laterale destra)\n
 mappa.\n
 }
 
-#nop --
-#nop Modloader Stuff
-#nop --
+#nop --;
+#nop Modloader Stuff;
+#nop --;
 
 #alias gui_ingame-register {
 	#nop need to check: events;
@@ -56,6 +56,12 @@ mappa.\n
 #NOP -------------------------------------------------------------------------;
 #NOP Init the graphical interface;
 #NOP -------------------------------------------------------------------------;
+#ALIAS {gui_ingame_init0}
+{
+    $isDetached 2;
+    #system {sh $bin/extrawindows.sh}
+}
+
 #ALIAS {gui_ingame_init}
 {
     map_start;
@@ -65,16 +71,9 @@ mappa.\n
       load_module trigger_attached;
       load_alias_sidebar
     };
-    #elseif {$isDetached == 1 }
-    {
-      #nop triggers for multi windows-win;
-      load_module trigger_detached;
-      alias_load_extsidebar
-    };
     #elseif {$isDetached == 2}
     { 
       #nop triggers for multi windows-linux;    
-      #system {sh $bin/extrawindows.sh};
       load_module trigger_detached;
       alias_load_extsidebar
     };

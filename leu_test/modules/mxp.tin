@@ -1,15 +1,15 @@
-#nop --
-#nop Class Definitions
-#nop --
+#nop --;
+#nop Class Definitions;
+#nop --;
 
 #var mxp-description {Funzioni di MXP}
 #var mxp-help {
 Gestione del protocllo mxp.\n
 }
 
-#nop --
-#nop Modloader Stuff
-#nop --
+#nop --;
+#nop Modloader Stuff;
+#nop --;
 
 #alias mxp-register {
 	#nop need to check: events;

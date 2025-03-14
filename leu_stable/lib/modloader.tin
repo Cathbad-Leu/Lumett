@@ -114,4 +114,4 @@ it lives in lib/, as it is not actually a module.\n
 register_module modloader
 #class modloader close
 
-#nop vim: syntax=tt
+#nop vim: syntax=tt;

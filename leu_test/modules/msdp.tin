@@ -1,6 +1,6 @@
-#nop --
-#nop Class Definitions
-#nop --
+#nop --;
+#nop Class Definitions;
+#nop --;
 
 #var msdp-description {Abilita il Mud Server Data Protocol}
 #var msdp-help {
@@ -8,9 +8,9 @@
 Le informazioni sono salvate in MSDP_%*.\n
 }
 
-#nop --
-#nop Modloader Stuff
-#nop --
+#nop --;
+#nop Modloader Stuff;
+#nop --;
 
 #alias msdp-register {
 	#if {@isloaded{functions}} {

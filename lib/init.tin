@@ -41,37 +41,6 @@
           #session gui_wizard;
           gui_wizard_init
      };
-     #elseif {"%0" == "unixcommander"}
-     {
-          #NOP -- init all and go wizard --;
-          #NOP -- if we are on unixlike set as 2;
-          #var isDetached 2;
-          #NOP -- import the conn wizard --;
-          #read ./lib/wizard.tin;
-          #NOP -- init the port for windows comunication --;
-          #line quiet #port init commander 5000;
-          #port flag private;
-          #NOP -- open the wizard --;
-          #session gui_wizard;
-          gui_wizard_init
-     };
-     #elseif {"%0" == "classic"}
-     {
-          #class COM_SESSION kill;
-          #NOP We don't want detached windows;
-          #NOP -- Start with attached windows --;
-          #NOP -- init all and go wizard --;
-          #var isDetached 0;
-          #NOP -- load the wizard --;
-          #read ./lib/wizard.tin;
-          #NOP -- setup the wizard --;
-          #session gui_wizard;
-          gui_wizard_init
-     };
-     #else 
-     {
-          #showme {please give an argument: classic,wincommander,unixcommander}    
-     }
 }
 
 #EVENT {SESSION CREATED}

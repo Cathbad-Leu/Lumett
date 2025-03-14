@@ -57,8 +57,7 @@ load_module triggers
 #SCREEN raise {SCREEN LOCATION}
 #SCREEN raise {DESKTOP DIMENSIONS}
 #SCREEN raise {SCREEN DIMENSIONS}
-
-#var isDetached 0
+gui_ingame_init0
 gui_ingame_init
 gui_ingame_refresh
 

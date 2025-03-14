@@ -1,6 +1,6 @@
-#nop --
-#nop Class Definitions
-#nop --
+#nop --;
+#nop Class Definitions;
+#nop --;
 
 #var triggers-description {Funzioni dei Trigger}
 #var triggers-help {
@@ -16,9 +16,9 @@ Vedi help action\n
 
 }
 
-#nop --
-#nop Modloader Stuff
-#nop --
+#nop --;
+#nop Modloader Stuff;
+#nop --;
 
 #alias triggers-register {
 	#nop need to check: events;

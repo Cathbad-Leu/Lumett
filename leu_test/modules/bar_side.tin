@@ -1,6 +1,6 @@
-#nop --
-#nop Class Definitions
-#nop --
+#nop --;
+#nop Class Definitions;
+#nop --;
 
 #var bar_side-description {Funzioni della bar_side}
 #var bar_side-help {
@@ -8,9 +8,9 @@ Gestione della barra laterale destra.\n
 La lista bar_side ha i dati della barra e le sue voci\n
 }
 
-#nop --
-#nop Modloader Stuff
-#nop --
+#nop --;
+#nop Modloader Stuff;
+#nop --;
 
 #alias bar_side-register {
 	#nop need to check: events;

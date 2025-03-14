@@ -1,7 +1,6 @@
-#NOP VSOF;
-#nop --
-#nop Class Definitions
-#nop --
+#nop --:
+#nop Class Definitions:
+#nop --:
 
 #var map-description {Funzioni della Mappa}
 #var map-help {
@@ -12,9 +11,9 @@ Vedi #help Map\n
 }
 #var map-register-delay 3
 
-#nop --
-#nop Modloader Stuff
-#nop --
+#nop --;
+#nop Modloader Stuff;
+#nop --;
 
 #alias map-register {
 	#if {!@isloaded{functions}} {

@@ -1,13 +1,13 @@
-#nop --
-#nop Class Definitions
-#nop --
+#nop --;
+#nop Class Definitions;
+#nop --;
 
 #var functions-description {Funzioni generali utili}
 #var functions-help {Many support <ccf>#function<fff>s you may find handy.}
 
-#nop --
-#nop Modloader Stuff
-#nop --
+#nop --;
+#nop Modloader Stuff;
+#nop --;
 
 #alias functions-register {
 	register_module functions

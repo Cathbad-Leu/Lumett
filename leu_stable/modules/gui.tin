@@ -1,6 +1,6 @@
-#nop --
-#nop Class Definitions
-#nop --
+#nop --;
+#nop Class Definitions;
+#nop --;
 
 #var gui-description {Funzioni della GUI}
 #var gui-help {
@@ -12,9 +12,9 @@ side_bar (barra laterale destra)\n
 mappa.\n
 }
 
-#nop --
-#nop Modloader Stuff
-#nop --
+#nop --;
+#nop Modloader Stuff;
+#nop --;
 
 #alias gui-register {
 	#nop need to check: events;

@@ -1,15 +1,15 @@
-#nop --
-#nop Class Definitions
-#nop --
+#nop --;
+#nop Class Definitions;
+#nop --;
 
 #var bar_comm-description {Funzioni della barra delle Comunicazioni}
 #var bar_comm-help {
 Funzioni della finestra di comunicazione.\n
 }
 
-#nop --
-#nop Modloader Stuff
-#nop --
+#nop --;
+#nop Modloader Stuff;
+#nop --;
 
 #alias bar_comm-register {
 	#nop need to check: events;
@@ -71,7 +71,7 @@ Funzioni della finestra di comunicazione.\n
     #return $bar_comm[toprow] $bar_comm[topcol] $bar_comm[botrow] $bar_comm[botcol];
 }
 
-#NOP -- Manda mslp link per il tab
+#NOP -- Manda mslp link per il tab;
 #EVENT {PRESSED SECURE LINK TAB MOUSE BUTTON ONE} {%4}
 
 #nop -------------------------------------------------------------------------;
