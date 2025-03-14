@@ -20,11 +20,13 @@ Su LINUX/IOS/ANDROID
     usare il comando nel prompt della shell
     termux su androi, ish su ios e wls2 o msys
     su windows:
-      - MSYS2 https://www.msys2.org/docs/terminals/
-    
-      - WLS2 https://learn.microsoft.com/it-it/windows/wsl/install 
+
+      - ISH	https://ish.app
+      - TERMUX	https://termux.dev/en/)
+      - MSYS2	https://www.msys2.org/docs/terminals/
+      - WLS2	https://learn.microsoft.com/it-it/windows/wsl/install 
    
-  - installare tintin++ (vedi wwww.Mudhalla.com)
+  - installare tintin++ https://tintin.mudhalla.net/install.php
   - sh lumett.sh
   - sh linux o wls/msys disponibile la modalità detached.
   - selezionare o creare il mud nel wizard.
