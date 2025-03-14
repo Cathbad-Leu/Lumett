@@ -38,6 +38,17 @@ load_module alias
 load_module gui_ingame
 load_module triggers
 
+#map create;
+map_start;
+
+#var isDetached 2;
+load_module trigger_detached;
+#nop triggers for multi windows-linux;  
+#system {sh ./leu_test/bin/extrawindows.sh};  
+gui_ingame_resize;
+gui_ingame_refresh;
+#delay {3} {alias_load_extsidebar};
+
 #NOP -------------------------------------------------------------------------;
 #NOP Macro to add movment with kyepad;
 #NOP -------------------------------------------------------------------------;
@@ -49,17 +60,6 @@ load_module triggers
 #macro {\eOv} {e; #echo e}
 #macro {\eOw} {u; #echo u}
 #macro {\eOx} {n; #echo n}
-
-#NOP -------------------------------------------------------------------------;
-#NOP Inizializza la nuova gui_ingame e dagli una rinfrescata;
-#NOP -------------------------------------------------------------------------;
-#SCREEN raise {SCREEN RESIZE}
-#SCREEN raise {SCREEN LOCATION}
-#SCREEN raise {DESKTOP DIMENSIONS}
-#SCREEN raise {SCREEN DIMENSIONS}
-
-gui_ingame_init 2;
-gui_ingame_refresh;
 
 #NOP -------------------------------------------------------------------------;
 #NOP Session's Events;
@@ -116,6 +116,14 @@ gui_ingame_refresh;
 {
 	#cursor position %1
 }
+
+#NOP -------------------------------------------------------------------------;
+#NOP Inizializza la nuova gui_ingame e dagli una rinfrescata;
+#NOP -------------------------------------------------------------------------;
+#SCREEN raise {SCREEN RESIZE}
+#SCREEN raise {SCREEN LOCATION}
+#SCREEN raise {DESKTOP DIMENSIONS}
+#SCREEN raise {SCREEN DIMENSIONS}
 
 #class LEU close
 

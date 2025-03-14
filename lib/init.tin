@@ -30,8 +30,6 @@
      #if {"%0" == "commander"}
      {
           #NOP -- init all and go wizard --;
-          #NOP -- if we are on windows set as 1;
-          #var isDetached 1;
           #NOP -- import the conn wizard --;
           #read ./lib/wizard.tin;
           #NOP -- init the port for windows comunication --;
@@ -40,7 +38,7 @@
           #NOP -- open the wizard --;
           #session gui_wizard;
           gui_wizard_init
-     };
+     }
 }
 
 #EVENT {SESSION CREATED}

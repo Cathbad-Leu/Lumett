@@ -85,7 +85,7 @@ richiamabili: con il numero assegnato.
     #UNVAR tmpallist;
 }
 
-#ALIAS {load_alias_sidebar} 
+#ALIAS {alias_load_sidebar} 
 {
     #VAR tmpallist;
     #line quiet #line capture tmpallist #class alias_data list;

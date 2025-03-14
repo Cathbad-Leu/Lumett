@@ -29,8 +29,7 @@ Vedi #help Map\n
 #nop -------------------------------------------------------------------------;
 
 #ALIAS {map_start}
-{
-    #MAP create;  
+{  
     #MAP flag nofollow off;
     #MAP flag static off;
     #MAP flag vtmap on;
@@ -92,15 +91,6 @@ Vedi #help Map\n
 {
     #MAP run {%0} 0.25
 }
-
-#NOP event {MAP ENTER ROOM}
-#NOP {     
-    #NOP class roomimagesclass assign #var rname "crname=$gmcp[room][info][name]";
-    #NOP VARIABLE roomimg $gmcp[room][info][num];
-    #NOP format {roomimg} {vnum=%s.png} {$roomimg};
-    #NOP class roomimagesclass assign #var num $roomimg;
-    #NOP class roomimagesclass write $imgs/currentroom.txt;
-#NOP }
 
 #FUNCTION {search_nearest} {
     #LOCAL tmp {};
