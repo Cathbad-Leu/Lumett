@@ -1,4 +1,4 @@
-Sistema per una client per mud scalabile e multipiattaforma
+Sistema per una client per mud scalabile e multipiattaforma.\n
 Principalmente pensato per il mud Lumen et Umbra.
 Adattabile a qualsiasi mud.
 E' possibile utilizzarla per vari altri mud.
