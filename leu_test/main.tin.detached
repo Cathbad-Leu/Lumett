@@ -57,9 +57,9 @@ load_module triggers
 #SCREEN raise {SCREEN LOCATION}
 #SCREEN raise {DESKTOP DIMENSIONS}
 #SCREEN raise {SCREEN DIMENSIONS}
-gui_ingame_init0
-gui_ingame_init
-gui_ingame_refresh
+
+gui_ingame_init 2;
+gui_ingame_refresh;
 
 #NOP -------------------------------------------------------------------------;
 #NOP Session's Events;
@@ -73,20 +73,6 @@ gui_ingame_refresh
 
 #EVENT {SESSION DISCONNECTED}
 { 
-    #SCREEN raise {SCREEN LOCATION};
-    #NOP SCREEN get height tmpscrh;
-    #NOP SCREEN get width  tmpscrw;
-    #NOP class roomimagesclass assign #var rname "crname=$gmcp[room][info][name]";
-    #NOP VARIABLE roomimg $gmcp[room][info][num];
-    #NOP format {roomimg} {vnum=%s.png} {$roomimg};
-    #NOP class roomimagesclass assign #var num $roomimg;
-    #NOP math {tmpscrh} {$tmpscrh + $scrTopY};
-    #NOP math {tmpscrw} {$tmpscrw + $scrTopX};
-    #NOP class roomimagesclass assign #var cscrH "scrH=$tmpscrh";
-    #NOP class roomimagesclass assign #var cscrW "scrW=$tmpscrw";
-    #NOP class roomimagesclass assign #var cscrtx "scrtx=$scrTopX";
-    #NOP class roomimagesclass assign #var cscrty "scrty=$scrTopY";
-    #NOP class roomimagesclass write $imgs/currentroom.txt;
     #MAP write $saves/map.txt
 }
 

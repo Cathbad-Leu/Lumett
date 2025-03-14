@@ -37,7 +37,7 @@ showimage () {
     do
       if [ -r "$img" ]
       then
-        #eval $(file "$img" | sed -e 's/.*, *\([0-9]*\) *x *\([0-9]*\).*/width=\1px; height=\2px/')
+        eval $(file "$img" | sed -e 's/.*, *\([0-9]*\) *x *\([0-9]*\).*/width=\1px; height=\2px/')
         $echo -en "\e]1337;File=name=$(echo "$img" | base64 -w 0);inline=1"
         $echo -en "${width}${height}${pAR}:$(base64 -w 0 "$img")\a"
       else
@@ -46,22 +46,3 @@ showimage () {
       fi
     done
 }
-
-#var2=$(echo "$var2" |grep -o 'scrtx=[^ ,]\+'  $ROOM_FILE)
-#screenl=$(echo "$var2" | cut -d'=' -f2 | cut -d'"' -f1)
-#var3=$(echo "$var3" |grep -o 'scrty=[^ ,]\+'  $ROOM_FILE)
-#screenh=$(echo "$var3" | cut -d'=' -f2 | cut -d'"' -f1)
-#var4=$(echo "$var4" |grep -o 'scrW=[^ ,]\+'  $ROOM_FILE)
-#screenw=$(echo "$var4" | cut -d'=' -f2 | cut -d'"' -f1)
-#printf '\033[3;%d;%dt' $screenw $screenh
-
-ROOM_FILE=$IMG_DIR/currentroom.txt
-REFRESH_RATE=0.50
-while [ "true" ]; do
-    var1=$(echo "$var1" |grep -o 'vnum=[^ ,]\+.png' $ROOM_FILE)
-    var5=$(echo "$var5" |grep -o 'crname=[^,]\+' $ROOM_FILE)
-    roomname=$(echo "$var5" | cut -d'=' -f2 | cut -d'"' -f1)
-    printf '\e]0;%s\007' $roomname
-    sleep $REFRESH_RATE
-    showimage -w 30 -h 30 $IMG_DIR/rooms/$var1
-done

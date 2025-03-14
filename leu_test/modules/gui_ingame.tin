@@ -56,30 +56,27 @@ mappa.\n
 #NOP -------------------------------------------------------------------------;
 #NOP Init the graphical interface;
 #NOP -------------------------------------------------------------------------;
-#ALIAS {gui_ingame_init0}
-{
-    $isDetached 2;
-    #system {sh $bin/extrawindows.sh}
-}
-
-#ALIAS {gui_ingame_init}
+#ALIAS {gui_ingame_init %1}
 {
     map_start;
-    #if {$isDetached == 0}
+    #if {%1 == 0}
     {
+      #var isDetached 0;
       #nop triggers for one window-client;
       load_module trigger_attached;
       load_alias_sidebar
     };
-    #elseif {$isDetached == 2}
+    #elseif {%1 == 2}
     { 
-      #nop triggers for multi windows-linux;    
+      #var isDetached 2;
+      #nop triggers for multi windows-linux;  
+      #system {sh ./leu_test/bin/extrawindows.sh};  
       load_module trigger_detached;
       alias_load_extsidebar
     };
     #Nop  and the gui;
     gui_ingame_resize;
-    gui_ingame_refresh;
+    gui_ingame_refresh
 }
 
 #NOP -------------------------------------------------------------------------;
