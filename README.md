@@ -12,19 +12,30 @@ Per tutte le informazioni del caso vedi il sito di
 Su LINUX/IOS/ANDROID 
   - Per avviare lo script che genera la client 
     usare il comando nel prompt della shell
-    dopo aver installato tintin++ e mintty: 
-
+    termux su androi, ish su ios e wls2 o msys
+    su windows.
+   -installare tintin++ (vedi wwww.Mudhalla.com)
   - sh lumett.sh
-  - sh lumettmulti.sh --> per una vers multifinestra
+  - sh linux o wls/msys disponibile la modalità detached.
+  - selezionare o creare il mud nel wizard.
 
 Su WINDOWS  
   Si puo' avviare direttamente con i file .batch.
   Oppure è possibile utilizzare il sottositema linux
-  WLS oppure msys. 
+  WLS oppure msys2. 
 
   - Scaricare il zip e decomprimere dove desiderato.
-  - lumett.bat      --> avviare per una versione classica  
-  - lumettmulti.bat --> per una vers multifinestra
+  - avviare lumett.bat
+  - selezionare o creare il mud nel wizard.
+
+La versione multifinestra e' disponibile solo su per
+sistemi linux o attraverso msys2 o wls2.
+
+---------------Release vers 1.8--------------------------------
+Modificato il wizard delle connessioni per supportare 
+la modalità detached su linux/wls/msys.
+Tolti i comandi ripetitivi lumettmulti.sh e .bat
+Vari bug fix
 
 ---------------Release vers 1.7--------------------------------
 Aggiunto un selettore di avvio.
