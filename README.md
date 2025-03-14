@@ -1,5 +1,6 @@
-File di script per una client per mud.
+Sistema per una client per mud scalabile e multipiattaforma
 Principalmente pensato per il mud Lumen et Umbra.
+Adattabile a qualsiasi mud.
 E' possibile utilizzarla per vari altri mud.
 La client e' scalcabile su sistemi diversi e dimensioni diverse.
 Premessa: avere installato sul sistema tintin o una delle varianti 
