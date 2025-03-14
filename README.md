@@ -168,8 +168,8 @@ Alla comunity di Lumen et Umbra, in particolare Nymiae,Xenon,Moylen,Oxon e Kyrus
 
 E alla ai vari autori di guide e manuali su Mudhalla.com
 
-![Immagine 2025-03-10 153700](https://github.com/user-attachments/assets/a3f21e21-50a9-495c-8fde-4ebd920ce148)
-![Immagine 2025-03-10 223404](https://github.com/user-attachments/assets/6bcbe4de-5b79-4eee-831f-d3a14bc06b84)
+![Screenshot 2025-03-14 232640](https://github.com/user-attachments/assets/e626abe5-0fc5-4ad3-8009-e9f9337bc921)
+![Screenshot 2025-03-14 232929](https://github.com/user-attachments/assets/249141f4-cb66-41f1-a701-cb2238ec469b)
 ![Immagine 2025-03-10 223536](https://github.com/user-attachments/assets/ee415325-baf8-4e82-a128-0fcbca321262)
 ![Immagine 2025-03-10 223616](https://github.com/user-attachments/assets/c39f42e5-4fd0-4312-8e33-0db8e11e1c2b)
 
