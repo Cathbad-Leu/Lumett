@@ -16,18 +16,18 @@ Per tutte le informazioni del caso vedi il sito di
   Tintin++ www.Mudhalla.com.
 
 Su LINUX/IOS/ANDROID 
-  - Per avviare lo script che genera la client 
-    usare il comando nel prompt della shell
-    termux su androi, ish su ios e wls2 o msys
-    su windows:
+  - Installare uno dei seguenti terminali se non si e'
+    su linux:
 
-      - ISH	https://ish.app
-      - TERMUX	https://termux.dev/en/)
-      - MSYS2	https://www.msys2.org/docs/terminals/
-      - WLS2	https://learn.microsoft.com/it-it/windows/wsl/install 
+      - IOS ISH		https://ish.app
+      - ANDROID TERMUX	https://termux.dev/en/)
+      - WINDOWS MSYS2	https://www.msys2.org/docs/terminals/
+      - WINDOWS WLS2	https://learn.microsoft.com/it-it/windows/wsl/install 
    
   - installare tintin++ https://tintin.mudhalla.net/install.php
-  - sh lumett.sh
+  - posizionare i file scaricati dove fa comodo
+  - accedere alla directory Lumett
+  - digitare il comando sh lumett.sh
   - sh linux o wls/msys disponibile la modalità detached.
   - selezionare o creare il mud nel wizard.
 
