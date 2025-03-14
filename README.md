@@ -17,7 +17,8 @@ Su LINUX/IOS/ANDROID
   - Per avviare lo script che genera la client 
     usare il comando nel prompt della shell
     termux su androi, ish su ios e wls2 o msys
-    su windows.
+    su windows
+
    -installare tintin++ (vedi wwww.Mudhalla.com)
   - sh lumett.sh
   - sh linux o wls/msys disponibile la modalità detached.
