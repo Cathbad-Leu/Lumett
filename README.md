@@ -19,9 +19,12 @@ Su LINUX/IOS/ANDROID
   - Per avviare lo script che genera la client 
     usare il comando nel prompt della shell
     termux su androi, ish su ios e wls2 o msys
-    su windows
-
-   -installare tintin++ (vedi wwww.Mudhalla.com)
+    su windows:
+      - MSYS2 https://www.msys2.org/docs/terminals/
+    
+      - WLS2 https://learn.microsoft.com/it-it/windows/wsl/install 
+   
+  - installare tintin++ (vedi wwww.Mudhalla.com)
   - sh lumett.sh
   - sh linux o wls/msys disponibile la modalità detached.
   - selezionare o creare il mud nel wizard.
@@ -30,7 +33,7 @@ Su WINDOWS
   Si puo' avviare direttamente con i file .batch.
   Oppure è possibile utilizzare il sottositema linux
   WLS oppure msys2 (vedi linux) 
-
+  
   - Scaricare il zip e decomprimere dove desiderato.
   - avviare lumett.bat
   - selezionare o creare il mud nel wizard.
