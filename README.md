@@ -1,3 +1,5 @@
+LUMETT CLIENT PROJECT
+
 Sistema per una client per mud scalabile e multipiattaforma.
 
 Principalmente pensato per il mud Lumen et Umbra.
@@ -27,7 +29,7 @@ Su LINUX/IOS/ANDROID
 Su WINDOWS  
   Si puo' avviare direttamente con i file .batch.
   Oppure è possibile utilizzare il sottositema linux
-  WLS oppure msys2. 
+  WLS oppure msys2 (vedi linux) 
 
   - Scaricare il zip e decomprimere dove desiderato.
   - avviare lumett.bat
