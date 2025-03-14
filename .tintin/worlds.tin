@@ -13,6 +13,7 @@
         {PASSWORD} {}
         {PORT} {6000}
         {SSL} {off}
+        {DETACHED} {off}
     }
     {leutest} 
     {
@@ -25,6 +26,7 @@
         {PASSWORD} {}
         {PORT} {7000}
         {SSL} {off}
+        {DETACHED} {off}
     }
 }
 
