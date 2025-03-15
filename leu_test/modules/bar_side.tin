@@ -21,32 +21,6 @@ La lista bar_side ha i dati della barra e le sue voci\n
 	}
 }
 
-#nop File di gestione della finestra delle comunicazioni e messaggi;
-
-#VARIABLE {bar_side}
-{
-    {active}  {al}
-    {botcol}  {-1}
-    {botrow}  {16}
-    {offset}  {1}
-    {tab} 
-    {
-        {al}  {}
-        {eq}  {}
-        {gr}  {}
-        {rip} {}
-    }
-    {topcol} {100}
-    {toprow} {8}
-    {unread} 
-    {
-        {al}  {0}
-        {ep}  {0}
-        {gr}  {0}
-        {rip} {0}
-    }
-}
-
 #BUTTON {$bar_side[toprow] $bar_side[topcol] $bar_side[botrow] $bar_side[botcol] SCROLLED MOUSE WHEEL UP}
 {
     bar_side_scroll_up $bar_side[active];

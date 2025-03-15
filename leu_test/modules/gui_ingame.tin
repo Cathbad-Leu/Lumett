@@ -53,6 +53,52 @@ mappa.\n
      {botcol} {-1}
 }
 
+#nop File di gestione della finestra delle comunicazioni e messaggi;
+#VARIABLE {bar_side}
+{
+    {active}  {al}
+    {botcol}  {-1}
+    {botrow}  {16}
+    {offset}  {1}
+    {tab} 
+    {
+        {al}  {}
+        {eq}  {}
+        {gr}  {}
+        {rip} {}
+    }
+    {topcol} {100}
+    {toprow} {8}
+    {unread} 
+    {
+        {al}  {0}
+        {ep}  {0}
+        {gr}  {0}
+        {rip} {0}
+    }
+}
+
+#VARIABLE {bar_comm}
+{
+    {active} {msg}
+    {botcol} {-1}
+    {botrow} {7}
+    {offset} {1}
+    {tab} 
+    {
+        {msg} {}
+        {grp} {}
+        {gld} {}
+    }
+    {topcol} {1}
+    {toprow} {2}
+    {unread} 
+    {
+        {msg} {0}
+        {grp} {0}
+        {gld} {0}
+    }
+}
 
 #NOP -------------------------------------------------------------------------;
 #NOP Resize the graphical interface;
@@ -64,30 +110,67 @@ mappa.\n
     #NOP if we have a single window;
     #if {$isDetached == 0} 
     {
-      #NOP large screen;
-      #if {$gui_ingame[rows] > 30 && $gui_ingame[cols] > 100}
-      {
-        #SPLIT {$gui_ingame[top]} {$gui_ingame[bot]} {$gui_ingame[left]} -100 1;
+      #NOP ultra large screen;
+      #if {$gui_ingame[rows] > 30 && $gui_ingame[cols] > 130}
+      {  
+        #NOP set up the screen layout;    
+        #MATH {gui_ingame[left]} {30}; 
+        #MATH {gui_ingame[right]} {$gui_ingame[cols] - 110};
+        #SPLIT {$gui_ingame[top]} {$gui_ingame[bot]} {$gui_ingame[left]} -110 1;
         #SCREEN clear all;
+        #NOP move the map;
         #MAP flag vtmap on;
-        #MATH {gui_ingame[right]} {$gui_ingame[cols] - 100};
+        #MAP offset 19 {-$gui_ingame[right]+4} -10 -3;  
+        #NOP show comm_bar;
+        bar_comm_draw_data $bar_comm[active];
+        #delay {0.5} {bar_comm_draw_tabs};
+        #NOP change bar_side attributes;
+        unload_module bar_side;
+        #DRAW white calign box {8} {-$gui_ingame[right]+2} -7 -1;
+        #MATH {bar_side[topcol]} {1};
+        #MATH {bar_side[botcol]} {30};
+        #MATH {bar_side[botrow]} {-8}; 
+        load_module bar_side;       
+        bar_side_draw_data $bar_side[active];
+        #delay {0.5} {bar_side_draw_tabs}
+      };      
+      #NOP large screen;
+      #elseif {$gui_ingame[rows] > 30 && $gui_ingame[cols] > 90}
+      {
+        #NOP set up the screen layout;        
+        #MATH {gui_ingame[left]} {1};    
+        #MATH {gui_ingame[right]} {$gui_ingame[cols] - 90}; 
+        #SPLIT {$gui_ingame[top]} {$gui_ingame[bot]} {$gui_ingame[left]} -90 1;
+        #SCREEN clear all;
+        #NOP move the map;
         #MAP flag vtmap on;
-        #MAP offset 18 {-$gui_ingame[right]+3} -10 -3;
+        #MAP offset 19 {-$gui_ingame[right]+4} -10 -3;
+        #NOP show comm_bar;
         bar_comm_draw_data $bar_comm[active];
         #delay {0.5} {bar_comm_draw_tabs};
         #DRAW white calign box {17} {-$gui_ingame[right]+2} -7 -1;
+        #NOP change bar_side attributes;
+        unload_module bar_side;
         #MATH {bar_side[topcol]} {-$gui_ingame[right]+2};
+        #MATH {bar_side[botcol]} {-1};
+        #MATH {bar_side[botrow]} {16};
+        load_module bar_side;
         bar_side_draw_data $bar_side[active];
         #delay {0.5} {bar_side_draw_tabs}
       };
       #NOP mid screen;
       #elseif {$gui_ingame[rows] > 30}
       {
-        #MAP flag vtmap on;
+        #NOP set up the screen layout;     
         #SCREEN clear all;
         #SPLIT 13 {$gui_ingame[bot]} 0 0 1;
+        #NOP move the map;
+        #MAP flag vtmap on;
         #MAP offset 8 1 14 -1;
+        #NOP change bar_comm attributes;
+        unload_module bar_comm;      
         #VAR {bar_comm[botrow]} 7;
+        load_module bar_comm;
         #delay {0.5} {bar_comm_draw_tabs}
       };
       #NOP small screen;

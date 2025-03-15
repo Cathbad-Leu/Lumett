@@ -20,28 +20,6 @@ Funzioni della finestra di comunicazione.\n
 	}
 }
 
-#VARIABLE {bar_comm}
-{
-    {active} {msg}
-    {botcol} {-1}
-    {botrow} {7}
-    {offset} {1}
-    {tab} 
-    {
-        {msg} {}
-        {grp} {}
-        {gld} {}
-    }
-    {topcol} {1}
-    {toprow} {2}
-    {unread} 
-    {
-        {msg} {0}
-        {grp} {0}
-        {gld} {0}
-    }
-}
-
 #ALIAS {bar_comm_scroll_up}
 {
     #if {$bar_comm[offset] < &bar_comm[tab][%0][]}

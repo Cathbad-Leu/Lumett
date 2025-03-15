@@ -1,6 +1,7 @@
 #NOP -------------------------------------------------------------------------;
 #NOP File principale, carica e predisponi tutto;
 #NOP -------------------------------------------------------------------------;
+
 #class LEU open;
 
 #NOP -- Importa le librerie         --;
@@ -43,7 +44,7 @@ load_module triggers
 #macro {\eOx} {n; #echo n}
 
 #NOP -------------------------------------------------------------------------;
-#NOP All'avvio chiede quale mud e personaggio usare;
+#NOP Imposta la confgiurazione;
 #NOP -------------------------------------------------------------------------;
 
 #NOP CONFIG {SCROLL_LOCK} {OFF};

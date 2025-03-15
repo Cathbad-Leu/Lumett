@@ -1,8 +1,7 @@
 #NOP -------------------------------------------------------------------------;
 #NOP File principale, carica e predisponi tutto;
 #NOP -------------------------------------------------------------------------;
-
-#class LEU open;
+#class LEU open
 
 #NOP -- Importa le librerie  --;
 #var library ./lib
@@ -30,22 +29,12 @@ load_module macro
 load_module map
 load_module bar_comm
 load_module bar_side
-#nop triggers for one window;
-#nop load_module trigger_attached;
-#nop triggers for multi windows;
-#nop load_module trigger_detached;
-load_module alias
+#NOP -- one window;
+#var isDetached 0
 load_module gui_ingame
+load_module alias
 load_module triggers
-
-#map create;
-map_start;
-
-#var isDetached 0; 
-load_module trigger_attached;
-gui_ingame_resize;
-gui_ingame_refresh;
-alias_load_sidebar;
+load_module trigger_attached
 
 #NOP -------------------------------------------------------------------------;
 #NOP Macro to add movment with kyepad;
@@ -60,6 +49,27 @@ alias_load_sidebar;
 #macro {\eOx} {n; #echo n}
 
 #NOP -------------------------------------------------------------------------;
+#NOP Inizializza la nuova gui_ingame e dagli una rinfrescata;
+#NOP -------------------------------------------------------------------------;
+#CONFIG {SCROLL_LOCK} {OFF};
+#NOP CONFIG {VERBOSE} {OFF};
+#NOP CONFIG {DEBUG TELNET} {OFF};
+#CONFIG {PACKET PATCH} {0.5};
+#CONFIG {MOUSE} {ON};
+#NOP CONFIG {MOUSE TRACKING} {OFF};
+#NOP CONFIG {MOUSE} {INFO};
+#NOP INFO {BUTTON} {OFF};
+#NOP INFO {EVENT} {OFF};
+map_start
+gui_ingame_resize
+gui_ingame_refresh
+alias_load_sidebar
+#SCREEN raise {SCREEN RESIZE}
+#SCREEN raise {SCREEN LOCATION}
+#SCREEN raise {DESKTOP DIMENSIONS}
+#SCREEN raise {SCREEN DIMENSIONS}
+
+#NOP -------------------------------------------------------------------------;
 #NOP Session's Events;
 #NOP -------------------------------------------------------------------------;
 
@@ -72,19 +82,6 @@ alias_load_sidebar;
 #EVENT {SESSION DISCONNECTED}
 { 
     #SCREEN raise {SCREEN LOCATION};
-    #NOP SCREEN get height tmpscrh;
-    #NOP SCREEN get width  tmpscrw;
-    #NOP class roomimagesclass assign #var rname "crname=$gmcp[room][info][name]";
-    #NOP VARIABLE roomimg $gmcp[room][info][num];
-    #NOP format {roomimg} {vnum=%s.png} {$roomimg};
-    #NOP class roomimagesclass assign #var num $roomimg;
-    #NOP math {tmpscrh} {$tmpscrh + $scrTopY};
-    #NOP math {tmpscrw} {$tmpscrw + $scrTopX};
-    #NOP class roomimagesclass assign #var cscrH "scrH=$tmpscrh";
-    #NOP class roomimagesclass assign #var cscrW "scrW=$tmpscrw";
-    #NOP class roomimagesclass assign #var cscrtx "scrtx=$scrTopX";
-    #NOP class roomimagesclass assign #var cscrty "scrty=$scrTopY";
-    #NOP class roomimagesclass write $imgs/currentroom.txt;
     #MAP write $saves/map.txt
 }
 
@@ -128,14 +125,6 @@ alias_load_sidebar;
 {
 	#cursor position %1
 }
-
-#NOP -------------------------------------------------------------------------;
-#NOP Inizializza la nuova gui_ingame e dagli una rinfrescata;
-#NOP -------------------------------------------------------------------------;
-#SCREEN raise {SCREEN RESIZE}
-#SCREEN raise {SCREEN LOCATION}
-#SCREEN raise {DESKTOP DIMENSIONS}
-#SCREEN raise {SCREEN DIMENSIONS}
 
 #class LEU close
 

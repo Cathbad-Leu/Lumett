@@ -34,20 +34,47 @@ load_module bar_side
 #nop load_module trigger_attached;
 #nop triggers for multi windows;
 #nop load_module trigger_detached;
-load_module alias
+#NOP -- one window;
+#var isDetached 2
 load_module gui_ingame
+load_module alias
 load_module triggers
+load_module trigger_detached
 
-#map create;
-map_start;
+#NOP -------------------------------------------------------------------------;
+#NOP Macro to add movment with kyepad;
+#NOP -------------------------------------------------------------------------;
 
-#var isDetached 2;
-load_module trigger_detached;
+#macro {\eOq} {d; #echo d}
+#macro {\eOr} {s; #echo s}
+#macro {\eOt} {w; #echo w}
+#macro {\eOu} {look; exits; info mob; info obj}
+#macro {\eOv} {e; #echo e}
+#macro {\eOw} {u; #echo u}
+#macro {\eOx} {n; #echo n}
+
+#NOP -------------------------------------------------------------------------;
+#NOP Inizializza la nuova gui_ingame e dagli una rinfrescata;
+#NOP -------------------------------------------------------------------------;
+#CONFIG {SCROLL_LOCK} {OFF};
+#NOP CONFIG {VERBOSE} {OFF};
+#NOP CONFIG {DEBUG TELNET} {OFF};
+#CONFIG {PACKET PATCH} {0.5};
+#CONFIG {MOUSE} {ON};
+#NOP CONFIG {MOUSE TRACKING} {OFF};
+#NOP CONFIG {MOUSE} {INFO};
+#NOP INFO {BUTTON} {OFF};
+#NOP INFO {EVENT} {OFF};
+map_start
+gui_ingame_resize
+gui_ingame_refresh
 #nop triggers for multi windows-linux;  
 #system {sh ./leu_test/bin/extrawindows.sh};  
-gui_ingame_resize;
-gui_ingame_refresh;
 #delay {3} {alias_load_extsidebar};
+#SCREEN raise {SCREEN RESIZE}
+#SCREEN raise {SCREEN LOCATION}
+#SCREEN raise {DESKTOP DIMENSIONS}
+#SCREEN raise {SCREEN DIMENSIONS}
 
 #NOP -------------------------------------------------------------------------;
 #NOP Macro to add movment with kyepad;

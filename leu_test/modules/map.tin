@@ -30,6 +30,7 @@ Vedi #help Map\n
 
 #ALIAS {map_start}
 {  
+    #map create;
     #MAP flag nofollow off;
     #MAP flag static off;
     #MAP flag vtmap on;
