@@ -1,4 +1,8 @@
-File di script per una client per il mud Lumen et Umbra.
+LUMETT CLIENT PROJECT
+
+Sistema per una client per mud scalabile e multipiattaforma.
+Adattabile a qualsiasi mud.
+La client e' scalcabile su sistemi diversi e dimensioni diverse.
 Premessa: avere installato sul sistema tintin o una delle varianti 
 (vedi wintin++) Linux o shell di comando linux esistono per tutti 
 i sistemi operativi, vedi: WLS per windows, Termux per Android, 
@@ -7,22 +11,36 @@ Per tutte le informazioni del caso vedi il sito di
   Tintin++ www.Mudhalla.com.
 
 Su LINUX/IOS/ANDROID 
-  - Per avviare lo script che genera la client 
-    usare il comando nel prompt della shell
-    dopo aver installato tintin++ e mintty: 
+  - Installare uno dei seguenti terminali se non si e'
+    su linux:
 
-  - sh lumett.sh
-  - sh lumettmulti.sh --> per una vers multifinestra
+      - IOS ISH		https://ish.app
+      - ANDROID TERMUX	https://termux.dev/en/)
+      - WINDOWS MSYS2	https://www.msys2.org/docs/terminals/
+      - WINDOWS WLS2	https://learn.microsoft.com/it-it/windows/wsl/install 
+   
+  - installare tintin++ https://tintin.mudhalla.net/install.php
+  - posizionare i file scaricati dove fa comodo
+  - accedere alla directory Lumett
+  - digitare il comando sh lumett.sh o lumettmulti.sh
+  - sh linux o wls/msys disponibile la modalità detached.
+  - selezionare o creare il mud nel wizard.
 
 Su WINDOWS  
   Si puo' avviare direttamente con i file .batch.
   Oppure è possibile utilizzare il sottositema linux
-  WLS oppure msys. 
-
+  WLS oppure msys2 (vedi linux) 
+  
   - Scaricare il zip e decomprimere dove desiderato.
-  - lumett.bat      --> avviare per una versione classica  
-  - lumettmulti.bat --> per una vers multifinestra
+  - avviare lumett.bat o lumettmulti.bat
+  - selezionare o creare il mud nel wizard.
 
+La versione multifinestra e' disponibile solo su per
+sistemi linux o attraverso msys2 o wls2.
+
+---------------Release vers 1.8--------------------------------
+Supporto per il mud Lumen et Umbra live e test.
+Varie migliorie e bugfix
 
 ---------------Release vers 1.7--------------------------------
 Aggiunto un selettore di avvio.
