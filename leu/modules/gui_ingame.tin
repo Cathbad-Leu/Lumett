@@ -58,6 +58,7 @@ mappa.\n
 #NOP -------------------------------------------------------------------------;
 #ALIAS {gui_ingame_init}
 {
+    #nop variable set in msdp.tin and gmcp.tin;
     #variable comm_protocol = "NONE";
     map_start;
     #if {$isDetached == 0}
@@ -76,7 +77,7 @@ mappa.\n
     {
       
       #system {sh ./extrawindows.sh};
-      #nop triggers for multi windows;
+      #nop linux triggers for multi windows;
       load_module trigger_detached;
       alias_load_extsidebar
     };

@@ -1,5 +1,5 @@
 #!/bin/bash
-IMG_DIR='./leu_test/imgs'
+IMG_DIR='./leu/imgs'
 
 showimage () {
     width=

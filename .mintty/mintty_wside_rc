@@ -1,0 +1,12 @@
+Columns=32
+Rows=40
+RewrapOnResize=no
+Language=@
+Locale=it_IT
+Charset=UTF-8
+ScrollbackLines=20
+Scrollbar=left
+ScrollMod=off
+ConfirmExit=no
+StatusLine=yes
+ThemeFile=mintty
