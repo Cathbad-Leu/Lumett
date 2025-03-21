@@ -5,7 +5,7 @@
     {leulive} 
     {
         {ALIAS} {leul}
-        {CHARACTER} {Cathbad}
+        {CHARACTER} {}
         {FILE} {./leu/main.tin}
         {HOST} {new-leu.leu.it}
         {INPUT} {}
