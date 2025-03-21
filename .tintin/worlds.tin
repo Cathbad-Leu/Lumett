@@ -10,7 +10,7 @@
         {HOST} {new-leu.leu.it}
         {INPUT} {}
         {NAME} {leulive}
-        {PASSWORD} {4p9Ku0CStocStUGAAMRLDYH=}
+        {PASSWORD} {}
         {PORT} {6000}
         {SSL} {off}
     }
