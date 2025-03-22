@@ -23,4 +23,4 @@ REM start the room image window
 @call .\bin\mintty.exe -p right --o Hold=error --Report o --configdir '.\usr\share\mintty' -c './.mintty/mintty_wimg_rc' -i './lumett.ico' -e '.\bin\bash.exe' -c -r 'sh ./bin/showimage.sh' %*
 
 REM start the mapper window
-@call .\bin\mintty.exe -p right --o Hold=error --Report o --configdir '.\usr\share\mintty' -o 'Background=./leu/imgs/mapbkg.jpg' -c './.mintty/mintty_wmap_rc' -i './lumett.ico' -e './bin/tt++.exe' -G -t 'Mappr' -r './lib/gui/win_mapper.tin' %*
+@call .\bin\mintty.exe -p right --o Hold=error --Report o --configdir '.\usr\share\mintty' -c './.mintty/mintty_wmap_rc' -i './lumett.ico' -e './bin/tt++.exe' -G -t 'Mappr' -r './lib/gui/win_mapper.tin' %*
