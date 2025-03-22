@@ -32,12 +32,12 @@ Vedi help action\n
 
 #ACTION {Tu dici a %1 %2}
 {
-    al_comms_char Tu dici a %1 %2
+    al_comms_chat Tu dici a %1 %2
 }
 
 #ACTION {%1 ti dice %2}
 {
-    al_comms_char %1 ti dice %2
+    al_comms_chat %1 ti dice %2
 }
 
 #ACTION {%1 dice al gruppo %2}
@@ -93,20 +93,20 @@ s
 
 #ACTION {~Mandi a %1 il pensiero %2}
 {
-    al_comms_char Tu mandi il pensiero a %1 %2
+    al_comms_chat Tu mandi il pensiero a %1 %2
 }
 
 #ACTION {~%1 ti manda il pensiero %2}
 {
-    al_comms_char %1 ti manda il pensiero %2
+    al_comms_chat %1 ti manda il pensiero %2
 }
 
 #ACTION {~Mandi a %1 il messggio %2}
 {
-    al_comms_char Tu mandi il messaggio a %1 %2
+    al_comms_chat Tu mandi il messaggio a %1 %2
 }
 
 #ACTION {~%1 ti manda il messaggio %2}
 {
-    al_comms_char %1 ti manda il messaggio %2
+    al_comms_chat %1 ti manda il messaggio %2
 }

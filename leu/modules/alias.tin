@@ -85,7 +85,8 @@ richiamabili: con il numero assegnato.
     #foreach {$info[ALIASES]} {ainde}
     {
         #FORMAT {tmpal} {%s} {\e]68;2;EXEC;$ainde[arg2]\a\e[4m$ainde[arg1]\e[24m};
-        bar_side_show al $tmpal
+        bar_side_show al $tmpal;
+        bar_side_Show al $ainde[arg2]
     }
 }
 
